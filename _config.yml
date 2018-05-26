@@ -1,9 +1,9 @@
 # Site settings
 title: Cal Badminton
-email: jjhong922@gmail.com
+email: young.guo@berkeley.edu
 description: > # this means to ignore newlines until "baseurl:"
   This is the official website for Cal Badminton, UC Berkeley's premier badminton club. Hope to see you on the courts!
-baseurl: "/calbadweb/" # the subpath of your site, e.g. /blog/
+baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://badminton.berkeley.edu" # the base hostname & protocol for your site
 
 # Build settings

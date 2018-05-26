@@ -9,12 +9,12 @@ layout: default
   <section class="wrapper style4 container">
     <ul class="posts">
       {% for post in site.posts %}
-      {% if post.categories contains 'faq' %}
-        <li class="wrapper {% cycle "style1", "style2" %}">
-          <h2>{{ post.title }}</h2>
-          {{ post.excerpt }}
-        </li>
-      {% endif %}
+        {% if post.categories contains 'faq' %}
+          <li class="wrapper {% cycle "style1", "style2" %}">
+            <h2>{{ post.title }}</h2>
+            {{ post.excerpt }}
+          </li>
+        {% endif %}
       {% endfor %}
     </ul>
   </section>

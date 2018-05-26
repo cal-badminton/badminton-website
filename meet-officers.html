@@ -16,120 +16,28 @@ layout: default
   </header>
   <!-- Officers -->
   <section class="wrapper style3 container special">
-    <div class="row">
-      <div class="3u">
-        <section>
-          <a class="image featured"><img src="images/officers_2017/jma.png" alt="" /></a>
-          <header>
-            <h3><a href="mailto:justinma@berkeley.edu">Justin <strong>Ma</strong></a> | President</h3>
-          </header>
-          <p>Third Year majoring in Computer Science</p>
-        </section>
+    {% assign officers = site.posts | where: "category", "officer" %}
+    {% assign rows = officers.size | divided_by: 4.0 | ceil %}
+    {% for i in (1..rows) %}
+      {% assign offset = forloop.index0 | times: 4 %}
+      <div class="row">
+        {% for officer in officers limit:4 offset:offset %}
+          <section class="3u">
+            <a class="image featured"><img src="{{ officer.image }}" alt="" /></a>
+            {{ post.firstname }}
+            <header>
+              <h3>
+                <a href="mailto:{{ officer.email }}">
+                  {{ officer.firstname }}
+                  <strong>{{ officer.lastname }}</strong>
+                </a> | {{ officer.title }}
+              </h3>
+            </header>
+            <p>Third Year majoring in {{ officer.major }}</p>
+          </section>
+        {% endfor %}
       </div>
-      <div class="3u">
-        <section>
-          <a class="image featured"><img src="images/officers_2017/mdo.png" alt="" /></a>
-          <header>
-            <h3><a href="mailto:michaeldo@berkeley.edu">Michael <strong>Do</strong></a> | Co&#8209;Vice President</h3>
-          </header>
-          <p>Fourth Year majoring in Computer Science</p>
-        </section>
-      </div>
-      <div class="3u">
-        <section>
-          <a class="image featured"><img src="images/officers_2017/wsheu.png" alt="" /></a>
-          <header>
-            <h3><a href="mailto:willsheu@berkeley.edu">William <strong>Sheu</strong></a> | Co&#8209;Vice President</h3>
-          </header>
-          <p>Third Year majoring in Computer Science</p>
-        </section>
-      </div>
-      <div class="3u">
-        <section>
-          <a class="image featured"><img src="images/officers_2017/acui.png" alt="" /></a>
-          <header>
-            <h3><a href="mailto:alexcui@berkeley.edu">Alex <strong>Cui</strong></a> | Secretary</h3>
-          </header>
-          <p>Second Year majoring in Material Science</p>
-        </section>
-      </div>
-    </div>
-    <div class="row">
-      <div class="3u">
-        <section>
-          <a class="image featured"><img src="images/officers_2017/kliu.png" alt="" /></a>
-          <header>
-            <h3><a href="mailto:kevinliu36@berkeley.edu">Kevin <strong>Liu</strong></a> | Treasurer</h3>
-          </header>
-          <p>Second Year majoring in Computer Science</p>
-        </section>
-      </div>
-      <div class="3u">
-        <section>
-          <a class="image featured"><img src="images/officers_2017/mhsiao.png" alt="" /></a>
-          <header>
-            <h3><a href="mailto:meganhsiao96@berkeley.edu">Megan <strong>Hsiao</strong></a> | Co&#8209;Social Chair</h3>
-          </header>
-          <p>Fourth Year majoring in Psychology</p>
-        </section>
-      </div>
-      <div class="3u">
-        <section>
-          <a class="image featured"><img src="images/officers_2017/yguo.png" alt="" /></a>
-          <header>
-            <h3><a href="mailto:young.guo@berkeley.edu">Young <strong>Guo</strong></a> | Co&#8209;Social Chair</h3>
-          </header>
-          <p>Third Year majoring in Computer Science</p>
-        </section>
-      </div>
-      <div class="3u">
-        <section>
-          <a class="image featured"><img src="images/officers_2017/idea.png" alt="" /></a>
-          <header>
-            <h3><a href="mailto:irenedea@berkeley.edu">Irene <strong>Dea</strong></a> | Historian</h3>
-          </header>
-          <p>Fourth Year majoring in Computer Science</p>
-        </section>
-      </div>
-    </div>
-    <div class="row">
-      <div class="3u">
-        <section>
-          <a class="image featured"><img src="images/officers_2017/jhuang.png" alt="" /></a>
-          <header>
-            <h3><a href="mailto:jhuang32@berkeley.edu">Joshua <strong>Huang</strong></a> | Co&#8209;Equipment Manager</h3>
-          </header>
-          <p>Fifth Year majoring in Material Science</p>
-        </section>
-      </div>
-      <div class="3u">
-        <section>
-          <a class="image featured"><img src="images/officers_2017/bxu.png" alt="" /></a>
-          <header>
-            <h3><a href="mailto:bryantxu@berkeley.edu">Bryant <strong>Xu</strong></a> | Co&#8209;Equipment Manager</h3>
-          </header>
-          <p>Second Year majoring in MCB</p>
-        </section>
-      </div>
-      <div class="3u">
-        <section>
-          <a class="image featured"><img src="images/officers_2017/npleung.png" alt="" /></a>
-          <header>
-            <h3><a href="mailto:ngapui.leung@berkeley.edu">Nga Pui <strong>Leung</strong></a> | Under Armour Representative</h3>
-          </header>
-          <p>Fourth Year majoring in Statistics</p>
-        </section>
-      </div>
-      <div class="3u">
-        <section>
-          <a class="image featured"><img src="images/officers_2017/jhong.png" alt="" /></a>
-          <header>
-            <h3><a href="mailto:jjhong922@berkeley.edu">Justin <strong>Hong</strong></a> | Webmaster</h3>
-          </header>
-          <p>Third Year majoring in Computer Science and MCB</p>
-        </section>
-      </div>
-    </div>
+    {% endfor %}
   </section>
   <!-- Two -->
   <section class="wrapper style1 container special">
