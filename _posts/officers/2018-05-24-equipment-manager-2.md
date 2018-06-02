@@ -2,7 +2,8 @@
 category: officer
 firstname: Bryant
 lastname: Xu
-major: Computer Science
+year: Third
+major: MCB
 image: images/officers_2018/bxu.png
 email: bryantxu@berkeley.edu
 date: 2018-05-24 00:00:11

@@ -2,6 +2,7 @@
 category: officer
 firstname: William
 lastname: Sheu
+year: Fourth
 major: Computer Science
 image: images/officers_2018/wsheu.png
 email: willsheu@berkeley.edu

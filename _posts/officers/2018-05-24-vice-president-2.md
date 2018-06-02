@@ -2,6 +2,7 @@
 category: officer
 firstname: Kevin
 lastname: Liu
+year: Third
 major: Computer Science
 image: images/officers_2018/kliu.png
 email: kevinliu36@berkeley.edu
