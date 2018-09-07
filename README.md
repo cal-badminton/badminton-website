@@ -10,6 +10,7 @@ To run locally:
 
 To deploy:
 * Run `jekyll build`
-* Run `scp -r _site/* badmintn@ssh.ocf.berkeley.edu`
+* Run `scp -r _site/* badmintn@ssh.ocf.berkeley.edu:public_html`
+* ssh into the server `ssh badmintn@ssh.ocf.berkeley.edu`
 * Fix the index file format `mv index.html index.shtml`
 * Then you are done!
