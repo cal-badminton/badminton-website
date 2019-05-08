@@ -12,5 +12,6 @@ To deploy:
 * Run `jekyll build`
 * Run `scp -r _site/* badmintn@ssh.ocf.berkeley.edu:public_html`
 * ssh into the server `ssh badmintn@ssh.ocf.berkeley.edu`
+* Go to the `public_html/` folder `cd public_html/`
 * Fix the index file format `mv index.html index.shtml`
 * Then you are done!
