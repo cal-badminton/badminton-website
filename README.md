@@ -5,6 +5,8 @@ Design by HTML5UP and compiled with JekyllRB. Hosted currently on OCF and can be
 
 To run locally:
 * (if not installed) Install the Jekyll gem with `gem install jekyll`
+* (if not installed) Install the bundle gem with `gem install bundle`
+* Install extra gems with `bundle install`
 * Go into the directory and `bundle exec jekyll serve -w --livereload`
 * access the website at `localhost:4000`
 
