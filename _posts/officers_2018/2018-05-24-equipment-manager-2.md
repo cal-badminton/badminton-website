@@ -1,5 +1,5 @@
 ---
-category: officer
+category: officer_2018
 firstname: Bryant
 lastname: Xu
 year: Third

@@ -1,6 +1,6 @@
 # Site settings
 title: Cal Badminton
-email: young.guo@berkeley.edu
+email: alexcui@berkeley.edu
 description: > # this means to ignore newlines until "baseurl:"
   This is the official website for Cal Badminton, UC Berkeley's premier badminton club. Hope to see you on the courts!
 baseurl: "" # the subpath of your site, e.g. /blog/

@@ -1,5 +1,5 @@
 ---
-category: officer
+category: officer_2018
 firstname: Ayush
 lastname: Maganahalli
 year: Third

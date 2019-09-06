@@ -16,7 +16,7 @@ layout: default
   </header>
   <!-- Officers -->
   <section class="wrapper style3 container special officer">
-    {% assign officers = site.posts | where: "category", "officer" | reverse %}
+    {% assign officers = site.posts | where: "category", "officer_2019" | reverse %}
     {% assign rows = officers.size | divided_by: 4.0 | ceil %}
     {% for i in (1..rows) %}
       {% assign offset = forloop.index0 | times: 4 %}
@@ -47,7 +47,7 @@ layout: default
           <p>
           If you have a general question for the club, please e-mail us at
           <a href="mailto:calbadminton@gmail.com">calbadminton@gmail.com</a>.</br>
-          Otherwise, please find the appropriate officer to contact below.
+          Otherwise, please find the appropriate officer to contact above.
           </p>
           <footer>
             <ul class="buttons">
