@@ -17,8 +17,8 @@ layout: default
   <!-- Officers -->
   <section class="wrapper style3 container special officer">
     <h1 style="font-size: 30pt; margin-bottom: 1em;"><strong>Executive Team</strong></h1>
-    {% assign executives = site.posts | where: "category", "officer_2020" | where: "executive", "1" | reverse %}
-    <div class="row">
+    {% assign executives = site.posts | where: "category", "officer_2021" | where: "executive", "1" | reverse %}
+    <div class="row" style="display: flex !important; justify-content: center !important;">
       {% for officer in executives limit:3 %}
         <section class="3u">
           <a class="image featured"><img src="{{ officer.image }}" alt="" /></a>
@@ -34,11 +34,11 @@ layout: default
       {% endfor %}
     </div>
     <h1 style="font-size: 30pt; margin-bottom: 1em;"><strong>Officer Team</strong></h1>
-    {% assign officers = site.posts | where: "category", "officer_2020" | where: "executive", "0" | reverse %}
+    {% assign officers = site.posts | where: "category", "officer_2021" | where: "executive", "0" | reverse %}
     {% assign rows = officers.size | divided_by: 4.0 | floor %}
     {% for i in (1..rows) %}
       {% assign offset = forloop.index0 | times: 4 %}
-      <div class="row">
+      <div class="row" style="display: flex !important; justify-content: center !important;">
         {% for officer in officers limit:4 offset:offset %}
         <section class="3u">
           <a class="image featured"><img src="{{ officer.image }}" alt="" /></a>
@@ -56,8 +56,8 @@ layout: default
         {% endfor %}
       </div>
     {% endfor %}
-    {% assign lastrow = site.posts | where: "category", "officer_2020" | where: "executive", "0" | where: "lastrow", "1" | reverse %}
-    <div class="row">
+    {% assign lastrow = site.posts | where: "category", "officer_2021" | where: "executive", "0" | where: "lastrow", "1" | reverse %}
+    <div class="row" style="display: flex !important; justify-content: center !important;">
       {% for officer in lastrow limit:4 %}
       <section class="3u">
         <a class="image featured" style="margin-top: 0.75em;"><img src="{{ officer.image }}" alt="" /></a>
