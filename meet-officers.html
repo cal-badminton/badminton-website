@@ -44,9 +44,9 @@ layout: default
       {% endfor %}
     </div>
     <h1 style="font-size: 30pt; margin-bottom: 1em;"><strong>Officer Team</strong></h1>
-    {% assign officers = site.posts | where: "category", "officer_2021" | where: "executive", "0" | reverse %}
+    {% assign officers = site.posts | where: "category", "officer_2021" | where: "executive", "0" | where: "lastrow", "0" | reverse %}
     {% assign rows = officers.size | divided_by: 4.0 | floor %}
-    {% for i in (1..rows) %}
+    {% for i in (0..rows) %}
       {% assign offset = forloop.index0 | times: 4 %}
       <div class="row">
         {% for officer in officers limit:4 offset:offset %}
