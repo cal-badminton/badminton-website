@@ -5,7 +5,7 @@ lastrow: 0
 firstname: Jimmy
 lastname: Do
 year: Third
-major: Data Science, Computer Science
+major: Data Science
 image: images/officers_2021/jimmyd.jpg
 email: jimmydo@berkeley.edu
 date: 2021-08-21 00:00:00
