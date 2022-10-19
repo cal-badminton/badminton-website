@@ -5,7 +5,7 @@ lastrow: 1
 firstname: John
 lastname: Le
 year: Fourth
-major: Computer Science, Minor in Data Science
+major: Computer Science
 image: images/officers_2021/johnl.jpg
 date: 2022-08-14 00:00:00
 title: "Senior Advisor"
