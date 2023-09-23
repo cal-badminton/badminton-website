@@ -10,7 +10,7 @@ layout: default
     <ul class="posts">
       {% for post in site.posts %}
         {% if post.categories contains 'faq' %}
-          <li class="wrapper {% cycle "style1", "style2" %}">
+          <li class="wrapper {% cycle 'style2', 'style5' %}">
             <h2>{{ post.title }}</h2>
             {{ post.excerpt }}
           </li>
