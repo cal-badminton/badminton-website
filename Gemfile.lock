@@ -9,7 +9,7 @@ GEM
       zeitwerk (~> 2.2, >= 2.2.2)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
-    bigdecimal (1.4.4)
+    bigdecimal (3.1.4)
     coffee-script (2.4.1)
       coffee-script-source
       execjs
@@ -258,14 +258,16 @@ GEM
       unf_ext
     unf_ext (0.0.7.7)
     unicode-display_width (1.7.0)
+    webrick (1.8.1)
     zeitwerk (2.4.2)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  bigdecimal (~> 1.4)
+  bigdecimal (~> 3.1.4)
   github-pages
+  webrick (~> 1.8)
 
 BUNDLED WITH
    2.3.19
