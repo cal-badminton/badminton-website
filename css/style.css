@@ -10,7 +10,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 /* Basic */
 
 body, #skel-layers-wrapper {
-  background: #f3f6fa;
+  background: #dcebff;
 }
 
 body.is-loading * {
@@ -603,6 +603,11 @@ input[type="reset"].small,
   padding: 4em;
 }
 
+.wrapper.style5 {
+  background: gray;
+  color:white;
+}
+
 /* Header */
 @-moz-keyframes reveal-header { 0% { top: -5em; } 100% { top: 0; } }
 @-webkit-keyframes reveal-header { 0% { top: -5em; } 100% { top: 0; } }
@@ -807,7 +812,7 @@ input[type="reset"].small,
 #banner {
   background-attachment: fixed;
   background-color: #645862;
-  background-image: url("../images/images_2022/spring_2022_team_photo.jpg");
+  background-image: url("../images/images_2023/team_photo.jpg");
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
