@@ -1,0 +1,736 @@
+current directory: C:/Users/jacki/Desktop/School/Cal Badminton/badminton-website/vendor/bundle/ruby/3.4.0/gems/bigdecimal-4.0.1/ext/bigdecimal
+C:/Ruby34-x64/bin/ruby.exe extconf.rb
+checking for __builtin_clz()... yes
+checking for __builtin_clzl()... yes
+checking for __builtin_clzll()... yes
+checking for float.h... yes
+checking for math.h... yes
+checking for stdbool.h... yes
+checking for stdlib.h... yes
+checking for x86intrin.h... yes
+checking for _lzcnt_u32() in x86intrin.h... no
+checking for _lzcnt_u64() in x86intrin.h... no
+checking for intrin.h... yes
+checking for __lzcnt() in intrin.h... no
+checking for __lzcnt64() in intrin.h... no
+checking for _BitScanReverse() in intrin.h... yes
+checking for _BitScanReverse64() in intrin.h... yes
+checking for ruby/atomic.h... yes
+checking for ruby/internal/has/builtin.h... yes
+checking for ruby/internal/static_assert.h... yes
+checking for rb_complex_real() in ruby.h... yes
+checking for rb_complex_imag() in ruby.h... yes
+checking for rb_opts_exception_p() in ruby.h... yes
+checking for rb_category_warn() in ruby.h... yes
+checking for RB_WARN_CATEGORY_DEPRECATED in ruby.h... yes
+creating Makefile
+
+current directory: C:/Users/jacki/Desktop/School/Cal Badminton/badminton-website/vendor/bundle/ruby/3.4.0/gems/bigdecimal-4.0.1/ext/bigdecimal
+make DESTDIR\= sitearchdir\=./.gem.20260204-8424-il1gu7 sitelibdir\=./.gem.20260204-8424-il1gu7 clean
+
+current directory: C:/Users/jacki/Desktop/School/Cal Badminton/badminton-website/vendor/bundle/ruby/3.4.0/gems/bigdecimal-4.0.1/ext/bigdecimal
+make DESTDIR\= sitearchdir\=./.gem.20260204-8424-il1gu7 sitelibdir\=./.gem.20260204-8424-il1gu7
+generating bigdecimal-x64-mingw-ucrt.def
+compiling bigdecimal.c
+bigdecimal.c: In function 'Init_bigdecimal':
+bigdecimal.c:3425:45: error: passing argument 2 of 'rb_define_global_function' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3425 |     rb_define_global_function("BigDecimal", f_BigDecimal, -1);
+      |                                             ^~~~~~~~~~~~
+      |                                             |
+      |                                             VALUE (*)(int,  VALUE *, VALUE) {aka long long unsigned int (*)(int,  long long unsigned int *, long long unsigned int)}
+In file included from C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/anyargs.h:78,
+                 from C:/Ruby34-x64/include/ruby-3.4.0/ruby/ruby.h:27,
+                 from bigdecimal.h:13,
+                 from bigdecimal.c:11:
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:124:57: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(int,  VALUE *, VALUE)' {aka 'long long unsigned int (*)(int,  long long unsigned int *, long long unsigned int)'}
+  124 | void rb_define_global_function(const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                 ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:2995:1: note: 'f_BigDecimal' declared here
+ 2995 | f_BigDecimal(int argc, VALUE *argv, VALUE self)
+      | ^~~~~~~~~~~~
+bigdecimal.c:3430:69: error: passing argument 3 of 'rb_define_singleton_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3430 |     rb_define_singleton_method(rb_cBigDecimal, "interpret_loosely", BigDecimal_s_interpret_loosely, 1);
+      |                                                                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                                     |
+      |                                                                     VALUE (*)(VALUE,  VALUE) {aka long long unsigned int (*)(long long unsigned int,  long long unsigned int)}
+In file included from C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/anyargs.h:76:
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/intern/class.h:365:68: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE,  VALUE)' {aka 'long long unsigned int (*)(long long unsigned int,  long long unsigned int)'}
+  365 | void rb_define_singleton_method(VALUE obj, const char *mid, VALUE(*func)(ANYARGS), int arity);
+      |                                                             ~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:3031:1: note: 'BigDecimal_s_interpret_loosely' declared here
+ 3031 | BigDecimal_s_interpret_loosely(VALUE klass, VALUE str)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+bigdecimal.c:3431:56: error: passing argument 3 of 'rb_define_singleton_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3431 |     rb_define_singleton_method(rb_cBigDecimal, "mode", BigDecimal_mode, -1);
+      |                                                        ^~~~~~~~~~~~~~~
+      |                                                        |
+      |                                                        VALUE (*)(int,  VALUE *, VALUE) {aka long long unsigned int (*)(int,  long long unsigned int *, long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/intern/class.h:365:68: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(int,  VALUE *, VALUE)' {aka 'long long unsigned int (*)(int,  long long unsigned int *, long long unsigned int)'}
+  365 | void rb_define_singleton_method(VALUE obj, const char *mid, VALUE(*func)(ANYARGS), int arity);
+      |                                                             ~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:944:1: note: 'BigDecimal_mode' declared here
+  944 | BigDecimal_mode(int argc, VALUE *argv, VALUE self)
+      | ^~~~~~~~~~~~~~~
+bigdecimal.c:3432:57: error: passing argument 3 of 'rb_define_singleton_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3432 |     rb_define_singleton_method(rb_cBigDecimal, "limit", BigDecimal_limit, -1);
+      |                                                         ^~~~~~~~~~~~~~~~
+      |                                                         |
+      |                                                         VALUE (*)(int,  VALUE *, VALUE) {aka long long unsigned int (*)(int,  long long unsigned int *, long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/intern/class.h:365:68: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(int,  VALUE *, VALUE)' {aka 'long long unsigned int (*)(int,  long long unsigned int *, long long unsigned int)'}
+  365 | void rb_define_singleton_method(VALUE obj, const char *mid, VALUE(*func)(ANYARGS), int arity);
+      |                                                             ~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:3055:1: note: 'BigDecimal_limit' declared here
+ 3055 | BigDecimal_limit(int argc, VALUE *argv, VALUE self)
+      | ^~~~~~~~~~~~~~~~
+bigdecimal.c:3433:62: error: passing argument 3 of 'rb_define_singleton_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3433 |     rb_define_singleton_method(rb_cBigDecimal, "double_fig", BigDecimal_double_fig, 0);
+      |                                                              ^~~~~~~~~~~~~~~~~~~~~
+      |                                                              |
+      |                                                              VALUE (*)(VALUE) {aka long long unsigned int (*)(long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/intern/class.h:365:68: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE)' {aka 'long long unsigned int (*)(long long unsigned int)'}
+  365 | void rb_define_singleton_method(VALUE obj, const char *mid, VALUE(*func)(ANYARGS), int arity);
+      |                                                             ~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:398:1: note: 'BigDecimal_double_fig' declared here
+  398 | BigDecimal_double_fig(VALUE self)
+      | ^~~~~~~~~~~~~~~~~~~~~
+bigdecimal.c:3434:57: error: passing argument 3 of 'rb_define_singleton_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3434 |     rb_define_singleton_method(rb_cBigDecimal, "_load", BigDecimal_load, 1);
+      |                                                         ^~~~~~~~~~~~~~~
+      |                                                         |
+      |                                                         VALUE (*)(VALUE,  VALUE) {aka long long unsigned int (*)(long long unsigned int,  long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/intern/class.h:365:68: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE,  VALUE)' {aka 'long long unsigned int (*)(long long unsigned int,  long long unsigned int)'}
+  365 | void rb_define_singleton_method(VALUE obj, const char *mid, VALUE(*func)(ANYARGS), int arity);
+      |                                                             ~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:692:1: note: 'BigDecimal_load' declared here
+  692 | BigDecimal_load(VALUE self, VALUE str)
+      | ^~~~~~~~~~~~~~~
+bigdecimal.c:3436:71: error: passing argument 3 of 'rb_define_singleton_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3436 |     rb_define_singleton_method(rb_cBigDecimal, "save_exception_mode", BigDecimal_save_exception_mode, 0);
+      |                                                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                                       |
+      |                                                                       VALUE (*)(VALUE) {aka long long unsigned int (*)(long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/intern/class.h:365:68: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE)' {aka 'long long unsigned int (*)(long long unsigned int)'}
+  365 | void rb_define_singleton_method(VALUE obj, const char *mid, VALUE(*func)(ANYARGS), int arity);
+      |                                                             ~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:3116:1: note: 'BigDecimal_save_exception_mode' declared here
+ 3116 | BigDecimal_save_exception_mode(VALUE self)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+bigdecimal.c:3437:70: error: passing argument 3 of 'rb_define_singleton_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3437 |     rb_define_singleton_method(rb_cBigDecimal, "save_rounding_mode", BigDecimal_save_rounding_mode, 0);
+      |                                                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                                      |
+      |                                                                      VALUE (*)(VALUE) {aka long long unsigned int (*)(long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/intern/class.h:365:68: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE)' {aka 'long long unsigned int (*)(long long unsigned int)'}
+  365 | void rb_define_singleton_method(VALUE obj, const char *mid, VALUE(*func)(ANYARGS), int arity);
+      |                                                             ~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:3141:1: note: 'BigDecimal_save_rounding_mode' declared here
+ 3141 | BigDecimal_save_rounding_mode(VALUE self)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+bigdecimal.c:3438:62: error: passing argument 3 of 'rb_define_singleton_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3438 |     rb_define_singleton_method(rb_cBigDecimal, "save_limit", BigDecimal_save_limit, 0);
+      |                                                              ^~~~~~~~~~~~~~~~~~~~~
+      |                                                              |
+      |                                                              VALUE (*)(VALUE) {aka long long unsigned int (*)(long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/intern/class.h:365:68: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE)' {aka 'long long unsigned int (*)(long long unsigned int)'}
+  365 | void rb_define_singleton_method(VALUE obj, const char *mid, VALUE(*func)(ANYARGS), int arity);
+      |                                                             ~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:3166:1: note: 'BigDecimal_save_limit' declared here
+ 3166 | BigDecimal_save_limit(VALUE self)
+      | ^~~~~~~~~~~~~~~~~~~~~
+bigdecimal.c:3565:51: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3565 |     rb_define_method(rb_cBigDecimal, "precision", BigDecimal_precision, 0);
+      |                                                   ^~~~~~~~~~~~~~~~~~~~
+      |                                                   |
+      |                                                   VALUE (*)(VALUE) {aka long long unsigned int (*)(long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE)' {aka 'long long unsigned int (*)(long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:537:1: note: 'BigDecimal_precision' declared here
+  537 | BigDecimal_precision(VALUE self)
+      | ^~~~~~~~~~~~~~~~~~~~
+bigdecimal.c:3566:47: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3566 |     rb_define_method(rb_cBigDecimal, "scale", BigDecimal_scale, 0);
+      |                                               ^~~~~~~~~~~~~~~~
+      |                                               |
+      |                                               VALUE (*)(VALUE) {aka long long unsigned int (*)(long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE)' {aka 'long long unsigned int (*)(long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:561:1: note: 'BigDecimal_scale' declared here
+  561 | BigDecimal_scale(VALUE self)
+      | ^~~~~~~~~~~~~~~~
+bigdecimal.c:3567:57: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3567 |     rb_define_method(rb_cBigDecimal, "precision_scale", BigDecimal_precision_scale, 0);
+      |                                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                         |
+      |                                                         VALUE (*)(VALUE) {aka long long unsigned int (*)(long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE)' {aka 'long long unsigned int (*)(long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:579:1: note: 'BigDecimal_precision_scale' declared here
+  579 | BigDecimal_precision_scale(VALUE self)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~
+bigdecimal.c:3568:62: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3568 |     rb_define_method(rb_cBigDecimal, "n_significant_digits", BigDecimal_n_significant_digits, 0);
+      |                                                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                              |
+      |                                                              VALUE (*)(VALUE) {aka long long unsigned int (*)(long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE)' {aka 'long long unsigned int (*)(long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:603:1: note: 'BigDecimal_n_significant_digits' declared here
+  603 | BigDecimal_n_significant_digits(VALUE self)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+bigdecimal.c:3570:45: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3570 |     rb_define_method(rb_cBigDecimal, "add", BigDecimal_add2, 2);
+      |                                             ^~~~~~~~~~~~~~~
+      |                                             |
+      |                                             VALUE (*)(VALUE,  VALUE,  VALUE) {aka long long unsigned int (*)(long long unsigned int,  long long unsigned int,  long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE,  VALUE,  VALUE)' {aka 'long long unsigned int (*)(long long unsigned int,  long long unsigned int,  long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:1972:1: note: 'BigDecimal_add2' declared here
+ 1972 | BigDecimal_add2(VALUE self, VALUE b, VALUE n)
+      | ^~~~~~~~~~~~~~~
+bigdecimal.c:3571:45: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3571 |     rb_define_method(rb_cBigDecimal, "sub", BigDecimal_sub2, 2);
+      |                                             ^~~~~~~~~~~~~~~
+      |                                             |
+      |                                             VALUE (*)(VALUE,  VALUE,  VALUE) {aka long long unsigned int (*)(long long unsigned int,  long long unsigned int,  long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE,  VALUE,  VALUE)' {aka 'long long unsigned int (*)(long long unsigned int,  long long unsigned int,  long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:1991:1: note: 'BigDecimal_sub2' declared here
+ 1991 | BigDecimal_sub2(VALUE self, VALUE b, VALUE n)
+      | ^~~~~~~~~~~~~~~
+bigdecimal.c:3572:46: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3572 |     rb_define_method(rb_cBigDecimal, "mult", BigDecimal_mult2, 2);
+      |                                              ^~~~~~~~~~~~~~~~
+      |                                              |
+      |                                              VALUE (*)(VALUE,  VALUE,  VALUE) {aka long long unsigned int (*)(long long unsigned int,  long long unsigned int,  long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE,  VALUE,  VALUE)' {aka 'long long unsigned int (*)(long long unsigned int,  long long unsigned int,  long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:2023:1: note: 'BigDecimal_mult2' declared here
+ 2023 | BigDecimal_mult2(VALUE self, VALUE b, VALUE n)
+      | ^~~~~~~~~~~~~~~~
+bigdecimal.c:3573:45: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3573 |     rb_define_method(rb_cBigDecimal, "div", BigDecimal_div3, -1);
+      |                                             ^~~~~~~~~~~~~~~
+      |                                             |
+      |                                             VALUE (*)(int,  VALUE *, VALUE) {aka long long unsigned int (*)(int,  long long unsigned int *, long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(int,  VALUE *, VALUE)' {aka 'long long unsigned int (*)(int,  long long unsigned int *, long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:1937:1: note: 'BigDecimal_div3' declared here
+ 1937 | BigDecimal_div3(int argc, VALUE *argv, VALUE self)
+      | ^~~~~~~~~~~~~~~
+bigdecimal.c:3574:46: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3574 |     rb_define_method(rb_cBigDecimal, "hash", BigDecimal_hash, 0);
+      |                                              ^~~~~~~~~~~~~~~
+      |                                              |
+      |                                              VALUE (*)(VALUE) {aka long long unsigned int (*)(long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE)' {aka 'long long unsigned int (*)(long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:641:1: note: 'BigDecimal_hash' declared here
+  641 | BigDecimal_hash(VALUE self)
+      | ^~~~~~~~~~~~~~~
+bigdecimal.c:3575:46: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3575 |     rb_define_method(rb_cBigDecimal, "to_s", BigDecimal_to_s, -1);
+      |                                              ^~~~~~~~~~~~~~~
+      |                                              |
+      |                                              VALUE (*)(int,  VALUE *, VALUE) {aka long long unsigned int (*)(int,  long long unsigned int *, long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(int,  VALUE *, VALUE)' {aka 'long long unsigned int (*)(int,  long long unsigned int *, long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:2286:1: note: 'BigDecimal_to_s' declared here
+ 2286 | BigDecimal_to_s(int argc, VALUE *argv, VALUE self)
+      | ^~~~~~~~~~~~~~~
+bigdecimal.c:3576:46: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3576 |     rb_define_method(rb_cBigDecimal, "to_i", BigDecimal_to_i, 0);
+      |                                              ^~~~~~~~~~~~~~~
+      |                                              |
+      |                                              VALUE (*)(VALUE) {aka long long unsigned int (*)(long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE)' {aka 'long long unsigned int (*)(long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:1092:1: note: 'BigDecimal_to_i' declared here
+ 1092 | BigDecimal_to_i(VALUE self)
+      | ^~~~~~~~~~~~~~~
+bigdecimal.c:3577:48: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3577 |     rb_define_method(rb_cBigDecimal, "to_int", BigDecimal_to_i, 0);
+      |                                                ^~~~~~~~~~~~~~~
+      |                                                |
+      |                                                VALUE (*)(VALUE) {aka long long unsigned int (*)(long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE)' {aka 'long long unsigned int (*)(long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:1092:1: note: 'BigDecimal_to_i' declared here
+ 1092 | BigDecimal_to_i(VALUE self)
+      | ^~~~~~~~~~~~~~~
+bigdecimal.c:3578:46: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3578 |     rb_define_method(rb_cBigDecimal, "to_r", BigDecimal_to_r, 0);
+      |                                              ^~~~~~~~~~~~~~~
+      |                                              |
+      |                                              VALUE (*)(VALUE) {aka long long unsigned int (*)(long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE)' {aka 'long long unsigned int (*)(long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:1180:1: note: 'BigDecimal_to_r' declared here
+ 1180 | BigDecimal_to_r(VALUE self)
+      | ^~~~~~~~~~~~~~~
+bigdecimal.c:3579:47: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3579 |     rb_define_method(rb_cBigDecimal, "split", BigDecimal_split, 0);
+      |                                               ^~~~~~~~~~~~~~~~
+      |                                               |
+      |                                               VALUE (*)(VALUE) {aka long long unsigned int (*)(long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE)' {aka 'long long unsigned int (*)(long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:2382:1: note: 'BigDecimal_split' declared here
+ 2382 | BigDecimal_split(VALUE self)
+      | ^~~~~~~~~~~~~~~~
+bigdecimal.c:3580:43: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3580 |     rb_define_method(rb_cBigDecimal, "+", BigDecimal_add, 1);
+      |                                           ^~~~~~~~~~~~~~
+      |                                           |
+      |                                           VALUE (*)(VALUE,  VALUE) {aka long long unsigned int (*)(long long unsigned int,  long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE,  VALUE)' {aka 'long long unsigned int (*)(long long unsigned int,  long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:1285:1: note: 'BigDecimal_add' declared here
+ 1285 | BigDecimal_add(VALUE self, VALUE r)
+      | ^~~~~~~~~~~~~~
+bigdecimal.c:3581:43: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3581 |     rb_define_method(rb_cBigDecimal, "-", BigDecimal_sub, 1);
+      |                                           ^~~~~~~~~~~~~~
+      |                                           |
+      |                                           VALUE (*)(VALUE,  VALUE) {aka long long unsigned int (*)(long long unsigned int,  long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE,  VALUE)' {aka 'long long unsigned int (*)(long long unsigned int,  long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:1339:1: note: 'BigDecimal_sub' declared here
+ 1339 | BigDecimal_sub(VALUE self, VALUE r)
+      | ^~~~~~~~~~~~~~
+bigdecimal.c:3582:44: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3582 |     rb_define_method(rb_cBigDecimal, "+@", BigDecimal_uplus, 0);
+      |                                            ^~~~~~~~~~~~~~~~
+      |                                            |
+      |                                            VALUE (*)(VALUE) {aka long long unsigned int (*)(long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE)' {aka 'long long unsigned int (*)(long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:1254:1: note: 'BigDecimal_uplus' declared here
+ 1254 | BigDecimal_uplus(VALUE self)
+      | ^~~~~~~~~~~~~~~~
+bigdecimal.c:3583:44: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3583 |     rb_define_method(rb_cBigDecimal, "-@", BigDecimal_neg, 0);
+      |                                            ^~~~~~~~~~~~~~
+      |                                            |
+      |                                            VALUE (*)(VALUE) {aka long long unsigned int (*)(long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE)' {aka 'long long unsigned int (*)(long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:1557:1: note: 'BigDecimal_neg' declared here
+ 1557 | BigDecimal_neg(VALUE self)
+      | ^~~~~~~~~~~~~~
+bigdecimal.c:3584:43: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3584 |     rb_define_method(rb_cBigDecimal, "*", BigDecimal_mult, 1);
+      |                                           ^~~~~~~~~~~~~~~
+      |                                           |
+      |                                           VALUE (*)(VALUE,  VALUE) {aka long long unsigned int (*)(long long unsigned int,  long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE,  VALUE)' {aka 'long long unsigned int (*)(long long unsigned int,  long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:1577:1: note: 'BigDecimal_mult' declared here
+ 1577 | BigDecimal_mult(VALUE self, VALUE r)
+      | ^~~~~~~~~~~~~~~
+bigdecimal.c:3585:43: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3585 |     rb_define_method(rb_cBigDecimal, "/", BigDecimal_div, 1);
+      |                                           ^~~~~~~~~~~~~~
+      |                                           |
+      |                                           VALUE (*)(VALUE,  VALUE) {aka long long unsigned int (*)(long long unsigned int,  long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE,  VALUE)' {aka 'long long unsigned int (*)(long long unsigned int,  long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:1619:1: note: 'BigDecimal_div' declared here
+ 1619 | BigDecimal_div(VALUE self, VALUE r)
+      | ^~~~~~~~~~~~~~
+bigdecimal.c:3586:45: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3586 |     rb_define_method(rb_cBigDecimal, "quo", BigDecimal_quo, -1);
+      |                                             ^~~~~~~~~~~~~~
+      |                                             |
+      |                                             VALUE (*)(int,  VALUE *, VALUE) {aka long long unsigned int (*)(int,  long long unsigned int *, long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(int,  VALUE *, VALUE)' {aka 'long long unsigned int (*)(int,  long long unsigned int *, long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:1645:1: note: 'BigDecimal_quo' declared here
+ 1645 | BigDecimal_quo(int argc, VALUE *argv, VALUE self)
+      | ^~~~~~~~~~~~~~
+bigdecimal.c:3587:43: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3587 |     rb_define_method(rb_cBigDecimal, "%", BigDecimal_mod, 1);
+      |                                           ^~~~~~~~~~~~~~
+      |                                           |
+      |                                           VALUE (*)(VALUE,  VALUE) {aka long long unsigned int (*)(long long unsigned int,  long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE,  VALUE)' {aka 'long long unsigned int (*)(long long unsigned int,  long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:1783:1: note: 'BigDecimal_mod' declared here
+ 1783 | BigDecimal_mod(VALUE self, VALUE r) /* %: a%b = a - (a.to_f/b).floor * b */
+      | ^~~~~~~~~~~~~~
+bigdecimal.c:3588:48: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3588 |     rb_define_method(rb_cBigDecimal, "modulo", BigDecimal_mod, 1);
+      |                                                ^~~~~~~~~~~~~~
+      |                                                |
+      |                                                VALUE (*)(VALUE,  VALUE) {aka long long unsigned int (*)(long long unsigned int,  long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE,  VALUE)' {aka 'long long unsigned int (*)(long long unsigned int,  long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:1783:1: note: 'BigDecimal_mod' declared here
+ 1783 | BigDecimal_mod(VALUE self, VALUE r) /* %: a%b = a - (a.to_f/b).floor * b */
+      | ^~~~~~~~~~~~~~
+bigdecimal.c:3589:51: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3589 |     rb_define_method(rb_cBigDecimal, "remainder", BigDecimal_remainder, 1);
+      |                                                   ^~~~~~~~~~~~~~~~~~~~
+      |                                                   |
+      |                                                   VALUE (*)(VALUE,  VALUE) {aka long long unsigned int (*)(long long unsigned int,  long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE,  VALUE)' {aka 'long long unsigned int (*)(long long unsigned int,  long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:1801:1: note: 'BigDecimal_remainder' declared here
+ 1801 | BigDecimal_remainder(VALUE self, VALUE r) /* remainder */
+      | ^~~~~~~~~~~~~~~~~~~~
+bigdecimal.c:3590:48: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3590 |     rb_define_method(rb_cBigDecimal, "divmod", BigDecimal_divmod, 1);
+      |                                                ^~~~~~~~~~~~~~~~~
+      |                                                |
+      |                                                VALUE (*)(VALUE,  VALUE) {aka long long unsigned int (*)(long long unsigned int,  long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE,  VALUE)' {aka 'long long unsigned int (*)(long long unsigned int,  long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:1834:1: note: 'BigDecimal_divmod' declared here
+ 1834 | BigDecimal_divmod(VALUE self, VALUE r)
+      | ^~~~~~~~~~~~~~~~~
+bigdecimal.c:3591:47: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3591 |     rb_define_method(rb_cBigDecimal, "clone", BigDecimal_clone, 0);
+      |                                               ^~~~~~~~~~~~~~~~
+      |                                               |
+      |                                               VALUE (*)(VALUE) {aka long long unsigned int (*)(long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE)' {aka 'long long unsigned int (*)(long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:2531:1: note: 'BigDecimal_clone' declared here
+ 2531 | BigDecimal_clone(VALUE self)
+      | ^~~~~~~~~~~~~~~~
+bigdecimal.c:3592:45: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3592 |     rb_define_method(rb_cBigDecimal, "dup", BigDecimal_clone, 0);
+      |                                             ^~~~~~~~~~~~~~~~
+      |                                             |
+      |                                             VALUE (*)(VALUE) {aka long long unsigned int (*)(long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE)' {aka 'long long unsigned int (*)(long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:2531:1: note: 'BigDecimal_clone' declared here
+ 2531 | BigDecimal_clone(VALUE self)
+      | ^~~~~~~~~~~~~~~~
+bigdecimal.c:3593:46: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3593 |     rb_define_method(rb_cBigDecimal, "to_f", BigDecimal_to_f, 0);
+      |                                              ^~~~~~~~~~~~~~~
+      |                                              |
+      |                                              VALUE (*)(VALUE) {aka long long unsigned int (*)(long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE)' {aka 'long long unsigned int (*)(long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:1131:1: note: 'BigDecimal_to_f' declared here
+ 1131 | BigDecimal_to_f(VALUE self)
+      | ^~~~~~~~~~~~~~~
+bigdecimal.c:3594:45: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3594 |     rb_define_method(rb_cBigDecimal, "abs", BigDecimal_abs, 0);
+      |                                             ^~~~~~~~~~~~~~
+      |                                             |
+      |                                             VALUE (*)(VALUE) {aka long long unsigned int (*)(long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE)' {aka 'long long unsigned int (*)(long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:2040:1: note: 'BigDecimal_abs' declared here
+ 2040 | BigDecimal_abs(VALUE self)
+      | ^~~~~~~~~~~~~~
+bigdecimal.c:3595:45: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3595 |     rb_define_method(rb_cBigDecimal, "fix", BigDecimal_fix, 0);
+      |                                             ^~~~~~~~~~~~~~
+      |                                             |
+      |                                             VALUE (*)(VALUE) {aka long long unsigned int (*)(long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE)' {aka 'long long unsigned int (*)(long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:2053:1: note: 'BigDecimal_fix' declared here
+ 2053 | BigDecimal_fix(VALUE self)
+      | ^~~~~~~~~~~~~~
+bigdecimal.c:3596:47: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3596 |     rb_define_method(rb_cBigDecimal, "round", BigDecimal_round, -1);
+      |                                               ^~~~~~~~~~~~~~~~
+      |                                               |
+      |                                               VALUE (*)(int,  VALUE *, VALUE) {aka long long unsigned int (*)(int,  long long unsigned int *, long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(int,  VALUE *, VALUE)' {aka 'long long unsigned int (*)(int,  long long unsigned int *, long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:2089:1: note: 'BigDecimal_round' declared here
+ 2089 | BigDecimal_round(int argc, VALUE *argv, VALUE self)
+      | ^~~~~~~~~~~~~~~~
+bigdecimal.c:3597:46: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3597 |     rb_define_method(rb_cBigDecimal, "frac", BigDecimal_frac, 0);
+      |                                              ^~~~~~~~~~~~~~~
+      |                                              |
+      |                                              VALUE (*)(VALUE) {aka long long unsigned int (*)(long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE)' {aka 'long long unsigned int (*)(long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:2197:1: note: 'BigDecimal_frac' declared here
+ 2197 | BigDecimal_frac(VALUE self)
+      | ^~~~~~~~~~~~~~~
+bigdecimal.c:3598:47: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3598 |     rb_define_method(rb_cBigDecimal, "floor", BigDecimal_floor, -1);
+      |                                               ^~~~~~~~~~~~~~~~
+      |                                               |
+      |                                               VALUE (*)(int,  VALUE *, VALUE) {aka long long unsigned int (*)(int,  long long unsigned int *, long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(int,  VALUE *, VALUE)' {aka 'long long unsigned int (*)(int,  long long unsigned int *, long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:2224:1: note: 'BigDecimal_floor' declared here
+ 2224 | BigDecimal_floor(int argc, VALUE *argv, VALUE self)
+      | ^~~~~~~~~~~~~~~~
+bigdecimal.c:3599:46: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3599 |     rb_define_method(rb_cBigDecimal, "ceil", BigDecimal_ceil, -1);
+      |                                              ^~~~~~~~~~~~~~~
+      |                                              |
+      |                                              VALUE (*)(int,  VALUE *, VALUE) {aka long long unsigned int (*)(int,  long long unsigned int *, long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(int,  VALUE *, VALUE)' {aka 'long long unsigned int (*)(int,  long long unsigned int *, long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:2247:1: note: 'BigDecimal_ceil' declared here
+ 2247 | BigDecimal_ceil(int argc, VALUE *argv, VALUE self)
+      | ^~~~~~~~~~~~~~~
+bigdecimal.c:3600:45: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3600 |     rb_define_method(rb_cBigDecimal, "<=>", BigDecimal_comp, 1);
+      |                                             ^~~~~~~~~~~~~~~
+      |                                             |
+      |                                             VALUE (*)(VALUE,  VALUE) {aka long long unsigned int (*)(long long unsigned int,  long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE,  VALUE)' {aka 'long long unsigned int (*)(long long unsigned int,  long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:1441:1: note: 'BigDecimal_comp' declared here
+ 1441 | BigDecimal_comp(VALUE self, VALUE r)
+      | ^~~~~~~~~~~~~~~
+bigdecimal.c:3601:44: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3601 |     rb_define_method(rb_cBigDecimal, "==", BigDecimal_eq, 1);
+      |                                            ^~~~~~~~~~~~~
+      |                                            |
+      |                                            VALUE (*)(VALUE,  VALUE) {aka long long unsigned int (*)(long long unsigned int,  long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE,  VALUE)' {aka 'long long unsigned int (*)(long long unsigned int,  long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:1457:1: note: 'BigDecimal_eq' declared here
+ 1457 | BigDecimal_eq(VALUE self, VALUE r)
+      | ^~~~~~~~~~~~~
+bigdecimal.c:3602:45: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3602 |     rb_define_method(rb_cBigDecimal, "===", BigDecimal_eq, 1);
+      |                                             ^~~~~~~~~~~~~
+      |                                             |
+      |                                             VALUE (*)(VALUE,  VALUE) {aka long long unsigned int (*)(long long unsigned int,  long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE,  VALUE)' {aka 'long long unsigned int (*)(long long unsigned int,  long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:1457:1: note: 'BigDecimal_eq' declared here
+ 1457 | BigDecimal_eq(VALUE self, VALUE r)
+      | ^~~~~~~~~~~~~
+bigdecimal.c:3603:46: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3603 |     rb_define_method(rb_cBigDecimal, "eql?", BigDecimal_eq, 1);
+      |                                              ^~~~~~~~~~~~~
+      |                                              |
+      |                                              VALUE (*)(VALUE,  VALUE) {aka long long unsigned int (*)(long long unsigned int,  long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE,  VALUE)' {aka 'long long unsigned int (*)(long long unsigned int,  long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:1457:1: note: 'BigDecimal_eq' declared here
+ 1457 | BigDecimal_eq(VALUE self, VALUE r)
+      | ^~~~~~~~~~~~~
+bigdecimal.c:3604:43: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3604 |     rb_define_method(rb_cBigDecimal, "<", BigDecimal_lt, 1);
+      |                                           ^~~~~~~~~~~~~
+      |                                           |
+      |                                           VALUE (*)(VALUE,  VALUE) {aka long long unsigned int (*)(long long unsigned int,  long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE,  VALUE)' {aka 'long long unsigned int (*)(long long unsigned int,  long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:1477:1: note: 'BigDecimal_lt' declared here
+ 1477 | BigDecimal_lt(VALUE self, VALUE r)
+      | ^~~~~~~~~~~~~
+bigdecimal.c:3605:44: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3605 |     rb_define_method(rb_cBigDecimal, "<=", BigDecimal_le, 1);
+      |                                            ^~~~~~~~~~~~~
+      |                                            |
+      |                                            VALUE (*)(VALUE,  VALUE) {aka long long unsigned int (*)(long long unsigned int,  long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE,  VALUE)' {aka 'long long unsigned int (*)(long long unsigned int,  long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:1498:1: note: 'BigDecimal_le' declared here
+ 1498 | BigDecimal_le(VALUE self, VALUE r)
+      | ^~~~~~~~~~~~~
+bigdecimal.c:3606:43: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3606 |     rb_define_method(rb_cBigDecimal, ">", BigDecimal_gt, 1);
+      |                                           ^~~~~~~~~~~~~
+      |                                           |
+      |                                           VALUE (*)(VALUE,  VALUE) {aka long long unsigned int (*)(long long unsigned int,  long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE,  VALUE)' {aka 'long long unsigned int (*)(long long unsigned int,  long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:1518:1: note: 'BigDecimal_gt' declared here
+ 1518 | BigDecimal_gt(VALUE self, VALUE r)
+      | ^~~~~~~~~~~~~
+bigdecimal.c:3607:44: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3607 |     rb_define_method(rb_cBigDecimal, ">=", BigDecimal_ge, 1);
+      |                                            ^~~~~~~~~~~~~
+      |                                            |
+      |                                            VALUE (*)(VALUE,  VALUE) {aka long long unsigned int (*)(long long unsigned int,  long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE,  VALUE)' {aka 'long long unsigned int (*)(long long unsigned int,  long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:1539:1: note: 'BigDecimal_ge' declared here
+ 1539 | BigDecimal_ge(VALUE self, VALUE r)
+      | ^~~~~~~~~~~~~
+bigdecimal.c:3608:47: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3608 |     rb_define_method(rb_cBigDecimal, "zero?", BigDecimal_zero, 0);
+      |                                               ^~~~~~~~~~~~~~~
+      |                                               |
+      |                                               VALUE (*)(VALUE) {aka long long unsigned int (*)(long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE)' {aka 'long long unsigned int (*)(long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:1423:1: note: 'BigDecimal_zero' declared here
+ 1423 | BigDecimal_zero(VALUE self)
+      | ^~~~~~~~~~~~~~~
+bigdecimal.c:3609:50: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3609 |     rb_define_method(rb_cBigDecimal, "nonzero?", BigDecimal_nonzero, 0);
+      |                                                  ^~~~~~~~~~~~~~~~~~
+      |                                                  |
+      |                                                  VALUE (*)(VALUE) {aka long long unsigned int (*)(long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE)' {aka 'long long unsigned int (*)(long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:1431:1: note: 'BigDecimal_nonzero' declared here
+ 1431 | BigDecimal_nonzero(VALUE self)
+      | ^~~~~~~~~~~~~~~~~~
+bigdecimal.c:3610:48: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3610 |     rb_define_method(rb_cBigDecimal, "coerce", BigDecimal_coerce, 1);
+      |                                                ^~~~~~~~~~~~~~~~~
+      |                                                |
+      |                                                VALUE (*)(VALUE,  VALUE) {aka long long unsigned int (*)(long long unsigned int,  long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE,  VALUE)' {aka 'long long unsigned int (*)(long long unsigned int,  long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:1235:1: note: 'BigDecimal_coerce' declared here
+ 1235 | BigDecimal_coerce(VALUE self, VALUE other)
+      | ^~~~~~~~~~~~~~~~~
+bigdecimal.c:3611:49: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3611 |     rb_define_method(rb_cBigDecimal, "inspect", BigDecimal_inspect, 0);
+      |                                                 ^~~~~~~~~~~~~~~~~~
+      |                                                 |
+      |                                                 VALUE (*)(VALUE) {aka long long unsigned int (*)(long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE)' {aka 'long long unsigned int (*)(long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:2432:1: note: 'BigDecimal_inspect' declared here
+ 2432 | BigDecimal_inspect(VALUE self)
+      | ^~~~~~~~~~~~~~~~~~
+bigdecimal.c:3612:50: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3612 |     rb_define_method(rb_cBigDecimal, "exponent", BigDecimal_exponent, 0);
+      |                                                  ^~~~~~~~~~~~~~~~~~~
+      |                                                  |
+      |                                                  VALUE (*)(VALUE) {aka long long unsigned int (*)(long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE)' {aka 'long long unsigned int (*)(long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:2420:1: note: 'BigDecimal_exponent' declared here
+ 2420 | BigDecimal_exponent(VALUE self)
+      | ^~~~~~~~~~~~~~~~~~~
+bigdecimal.c:3613:46: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3613 |     rb_define_method(rb_cBigDecimal, "sign", BigDecimal_sign, 0);
+      |                                              ^~~~~~~~~~~~~~~
+      |                                              |
+      |                                              VALUE (*)(VALUE) {aka long long unsigned int (*)(long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE)' {aka 'long long unsigned int (*)(long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:3091:1: note: 'BigDecimal_sign' declared here
+ 3091 | BigDecimal_sign(VALUE self)
+      | ^~~~~~~~~~~~~~~
+bigdecimal.c:3614:51: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3614 |     rb_define_method(rb_cBigDecimal, "nan?",      BigDecimal_IsNaN, 0);
+      |                                                   ^~~~~~~~~~~~~~~~
+      |                                                   |
+      |                                                   VALUE (*)(VALUE) {aka long long unsigned int (*)(long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE)' {aka 'long long unsigned int (*)(long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:1049:1: note: 'BigDecimal_IsNaN' declared here
+ 1049 | BigDecimal_IsNaN(VALUE self)
+      | ^~~~~~~~~~~~~~~~
+bigdecimal.c:3615:51: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3615 |     rb_define_method(rb_cBigDecimal, "infinite?", BigDecimal_IsInfinite, 0);
+      |                                                   ^~~~~~~~~~~~~~~~~~~~~
+      |                                                   |
+      |                                                   VALUE (*)(VALUE) {aka long long unsigned int (*)(long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE)' {aka 'long long unsigned int (*)(long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:1060:1: note: 'BigDecimal_IsInfinite' declared here
+ 1060 | BigDecimal_IsInfinite(VALUE self)
+      | ^~~~~~~~~~~~~~~~~~~~~
+bigdecimal.c:3616:51: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3616 |     rb_define_method(rb_cBigDecimal, "finite?",   BigDecimal_IsFinite, 0);
+      |                                                   ^~~~~~~~~~~~~~~~~~~
+      |                                                   |
+      |                                                   VALUE (*)(VALUE) {aka long long unsigned int (*)(long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE)' {aka 'long long unsigned int (*)(long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:1070:1: note: 'BigDecimal_IsFinite' declared here
+ 1070 | BigDecimal_IsFinite(VALUE self)
+      | ^~~~~~~~~~~~~~~~~~~
+bigdecimal.c:3617:51: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3617 |     rb_define_method(rb_cBigDecimal, "truncate",  BigDecimal_truncate, -1);
+      |                                                   ^~~~~~~~~~~~~~~~~~~
+      |                                                   |
+      |                                                   VALUE (*)(int,  VALUE *, VALUE) {aka long long unsigned int (*)(int,  long long unsigned int *, long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(int,  VALUE *, VALUE)' {aka 'long long unsigned int (*)(int,  long long unsigned int *, long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:2189:1: note: 'BigDecimal_truncate' declared here
+ 2189 | BigDecimal_truncate(int argc, VALUE *argv, VALUE self)
+      | ^~~~~~~~~~~~~~~~~~~
+bigdecimal.c:3618:57: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3618 |     rb_define_method(rb_cBigDecimal, "_decimal_shift",  BigDecimal_decimal_shift, 1);
+      |                                                         ^~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                         |
+      |                                                         VALUE (*)(VALUE,  VALUE) {aka long long unsigned int (*)(long long unsigned int,  long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE,  VALUE)' {aka 'long long unsigned int (*)(long long unsigned int,  long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:2456:1: note: 'BigDecimal_decimal_shift' declared here
+ 2456 | BigDecimal_decimal_shift(VALUE self, VALUE v)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~
+bigdecimal.c:3619:47: error: passing argument 3 of 'rb_define_method' from incompatible pointer type [-Wincompatible-pointer-types]
+ 3619 |     rb_define_method(rb_cBigDecimal, "_dump", BigDecimal_dump, -1);
+      |                                               ^~~~~~~~~~~~~~~
+      |                                               |
+      |                                               VALUE (*)(int,  VALUE *, VALUE) {aka long long unsigned int (*)(int,  long long unsigned int *, long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/method.h:99:61: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(int,  VALUE *, VALUE)' {aka 'long long unsigned int (*)(int,  long long unsigned int *, long long unsigned int)'}
+   99 | void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                     ~~~~~~~~^~~~~~~~~~~~~~
+bigdecimal.c:667:1: note: 'BigDecimal_dump' declared here
+  667 | BigDecimal_dump(int argc, VALUE *argv, VALUE self)
+      | ^~~~~~~~~~~~~~~
+make: *** [Makefile:252: bigdecimal.o] Error 1
+
+make failed, exit code 2

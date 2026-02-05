@@ -1,0 +1,35 @@
+current directory: C:/Users/jacki/Desktop/School/Cal Badminton/badminton-website/vendor/bundle/ruby/3.4.0/gems/prism-1.8.0/ext/prism
+C:/Ruby34-x64/bin/ruby.exe extconf.rb
+checking for prism.h in C:/Users/jacki/Desktop/School/Cal Badminton/badminton-website/vendor/bundle/ruby/3.4.0/gems/prism-1.8.0/include... yes
+checking for prism/extension.h in C:/Users/jacki/Desktop/School/Cal Badminton/badminton-website/vendor/bundle/ruby/3.4.0/gems/prism-1.8.0/ext... yes
+checking for whether -fvisibility=hidden is accepted as CFLAGS... yes
+creating Makefile
+
+current directory: C:/Users/jacki/Desktop/School/Cal Badminton/badminton-website/vendor/bundle/ruby/3.4.0/gems/prism-1.8.0/ext/prism
+make DESTDIR\= sitearchdir\=./.gem.20260122-57492-7us4gi sitelibdir\=./.gem.20260122-57492-7us4gi clean
+
+current directory: C:/Users/jacki/Desktop/School/Cal Badminton/badminton-website/vendor/bundle/ruby/3.4.0/gems/prism-1.8.0/ext/prism
+make DESTDIR\= sitearchdir\=./.gem.20260122-57492-7us4gi sitelibdir\=./.gem.20260122-57492-7us4gi
+generating prism-x64-mingw-ucrt.def
+compiling api_node.c
+compiling api_pack.c
+api_pack.c: In function 'Init_prism_pack':
+api_pack.c:269:56: error: passing argument 3 of 'rb_define_singleton_method' from incompatible pointer type [-Wincompatible-pointer-types]
+  269 |     rb_define_singleton_method(rb_cPrismPack, "parse", pack_parse, 3);
+      |                                                        ^~~~~~~~~~
+      |                                                        |
+      |                                                        VALUE (*)(VALUE,  VALUE,  VALUE,  VALUE) {aka long long unsigned int (*)(long long unsigned int,  long long unsigned int,  long long unsigned int,  long long unsigned int)}
+In file included from C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/anyargs.h:76,
+                 from C:/Ruby34-x64/include/ruby-3.4.0/ruby/ruby.h:27,
+                 from C:/Ruby34-x64/include/ruby-3.4.0/ruby.h:38,
+                 from C:/Users/jacki/Desktop/School/Cal Badminton/badminton-website/vendor/bundle/ruby/3.4.0/gems/prism-1.8.0/ext/prism/extension.h:6,
+                 from api_pack.c:1:
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/intern/class.h:365:68: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE,  VALUE,  VALUE,  VALUE)' {aka 'long long unsigned int (*)(long long unsigned int,  long long unsigned int,  long long unsigned int,  long long unsigned int)'}
+  365 | void rb_define_singleton_method(VALUE obj, const char *mid, VALUE(*func)(ANYARGS), int arity);
+      |                                                             ~~~~~~~^~~~~~~~~~~~~~
+api_pack.c:181:1: note: 'pack_parse' declared here
+  181 | pack_parse(VALUE self, VALUE version_symbol, VALUE variant_symbol, VALUE format_string) {
+      | ^~~~~~~~~~
+make: *** [Makefile:251: api_pack.o] Error 1
+
+make failed, exit code 2

@@ -1,0 +1,9 @@
+current directory: C:/Users/jacki/Desktop/School/Cal Badminton/badminton-website/vendor/bundle/ruby/3.4.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
+C:/Ruby34-x64/bin/ruby.exe extconf.rb
+creating Makefile
+
+current directory: C:/Users/jacki/Desktop/School/Cal Badminton/badminton-website/vendor/bundle/ruby/3.4.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
+make DESTDIR\= sitearchdir\=./.gem.20250425-21140-p21iy0 sitelibdir\=./.gem.20250425-21140-p21iy0 clean
+current directory: C:/Users/jacki/Desktop/School/Cal Badminton/badminton-website/vendor/bundle/ruby/3.4.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
+make DESTDIR\= sitearchdir\=./.gem.20250425-21140-p21iy0 sitelibdir\=./.gem.20250425-21140-p21iy0
+make failedNo such file or directory - make

@@ -1,0 +1,41 @@
+current directory: C:/Users/jacki/Desktop/School/Cal Badminton/badminton-website/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+C:/Ruby34-x64/bin/ruby.exe extconf.rb
+creating Makefile
+
+current directory: C:/Users/jacki/Desktop/School/Cal Badminton/badminton-website/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20260204-8424-uq7reo sitelibdir\=./.gem.20260204-8424-uq7reo clean
+
+current directory: C:/Users/jacki/Desktop/School/Cal Badminton/badminton-website/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20260204-8424-uq7reo sitelibdir\=./.gem.20260204-8424-uq7reo
+generating cparse-x64-mingw-ucrt.def
+compiling cparse.c
+cparse.c: In function 'Init_cparse':
+cparse.c:814:58: error: passing argument 3 of 'rb_define_private_method' from incompatible pointer type [-Wincompatible-pointer-types]
+  814 |     rb_define_private_method(Parser, "_racc_do_parse_c", racc_cparse, 2);
+      |                                                          ^~~~~~~~~~~
+      |                                                          |
+      |                                                          VALUE (*)(VALUE,  VALUE,  VALUE) {aka long long unsigned int (*)(long long unsigned int,  long long unsigned int,  long long unsigned int)}
+In file included from C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/anyargs.h:76,
+                 from C:/Ruby34-x64/include/ruby-3.4.0/ruby/ruby.h:27,
+                 from C:/Ruby34-x64/include/ruby-3.4.0/ruby.h:38,
+                 from cparse.c:12:
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/intern/class.h:352:69: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE,  VALUE,  VALUE)' {aka 'long long unsigned int (*)(long long unsigned int,  long long unsigned int,  long long unsigned int)'}
+  352 | void rb_define_private_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                             ~~~~~~~~^~~~~~~~~~~~~~
+cparse.c:236:1: note: 'racc_cparse' declared here
+  236 | racc_cparse(VALUE parser, VALUE arg, VALUE sysdebug)
+      | ^~~~~~~~~~~
+cparse.c:815:57: error: passing argument 3 of 'rb_define_private_method' from incompatible pointer type [-Wincompatible-pointer-types]
+  815 |     rb_define_private_method(Parser, "_racc_yyparse_c", racc_yyparse, 4);
+      |                                                         ^~~~~~~~~~~~
+      |                                                         |
+      |                                                         VALUE (*)(VALUE,  VALUE,  VALUE,  VALUE,  VALUE) {aka long long unsigned int (*)(long long unsigned int,  long long unsigned int,  long long unsigned int,  long long unsigned int,  long long unsigned int)}
+C:/Ruby34-x64/include/ruby-3.4.0/ruby/internal/intern/class.h:352:69: note: expected 'VALUE (*)(void)' {aka 'long long unsigned int (*)(void)'} but argument is of type 'VALUE (*)(VALUE,  VALUE,  VALUE,  VALUE,  VALUE)' {aka 'long long unsigned int (*)(long long unsigned int,  long long unsigned int,  long long unsigned int,  long long unsigned int,  long long unsigned int)'}
+  352 | void rb_define_private_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+      |                                                             ~~~~~~~~^~~~~~~~~~~~~~
+cparse.c:254:1: note: 'racc_yyparse' declared here
+  254 | racc_yyparse(VALUE parser, VALUE lexer, VALUE lexmid, VALUE arg, VALUE sysdebug)
+      | ^~~~~~~~~~~~
+make: *** [Makefile:251: cparse.o] Error 1
+
+make failed, exit code 2

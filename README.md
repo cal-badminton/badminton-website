@@ -1,7 +1,7 @@
 Cal Badminton Website
 =====================
 
-Design by HTML5UP and compiled with JekyllRB. Hosted currently on OCF and can be accessed [here](https://badminton.berkeley.edu).
+Design by HTML5UP and compiled with JekyllRB. Hosted currently on OCF and can be accessed [here](https://badminton.studentorg.berkeley.edu/).
 
 To run locally:
 * (if not installed) Install the Jekyll gem with `gem install jekyll`
